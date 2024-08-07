@@ -1,0 +1,87 @@
+// variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-family: "Arial", sans-serif;
+$input-border-radius: 5px;
+$transition-time: 0.3s;
+
+// mixins
+@mixin transition($property) {
+  transition: $property $transition-time ease-in-out;
+}
+
+// styles
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: $font-family;
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: $input-border-radius;
+    @include transition(all);
+
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: $primary-color;
+    border: none;
+    border-radius: $input-border-radius;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    @include transition(background);
+
+    &:hover {
+      background: $secondary-color;
+    }
+  }
+}
+
+// animations
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// applying animations
+form {
+  animation: fadeIn 1s ease-in-out;
+
+  div {
+    animation: slideUp 0.5s ease-in-out;
+  }
+}

@@ -1,0 +1,16 @@
+<form [formGroup]="loginForm" class="login-form">
+  <div>
+    <div>
+      <label for="email">ایمیل</label>
+      <input type="text" name="email" formControlName="email" />
+    </div>
+
+    <div>
+      <label for="password">پسورد</label>
+      <input type="password" name="password" formControlName="password" />
+    </div>
+
+    <input type="submit" value="ورود" (click)="submitLoginForm()" />
+    <a (click)="register()">ثبت نام</a>
+  </div>
+</form>

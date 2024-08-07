@@ -1,0 +1,36 @@
+<form [formGroup]="registerForm">
+  <div>
+    <div>
+      <label for="">ایمیل</label>
+      <input type="text" name="email" formControlName="email" />
+    </div>
+    <div>
+      <label for="">نام</label>
+      <input type="text" name="firstName" formControlName="firstName" />
+    </div>
+
+    <div>
+      <label for=""> نام خانوادگی</label>
+      <input type="text" name="lastName" formControlName="lastName" />
+    </div>
+    <div>
+      <label for="">پسورد</label>
+      <input type="text" name="password" formControlName="password" />
+    </div>
+    <div>
+      <label for="">پسورد</label>
+      <input
+        type="text"
+        name="confirmPassword"
+        formControlName="confirmPassword"
+      />
+    </div>
+
+    <div>
+      <label for="">آدرس</label>
+      <input type="text" name="address" formControlName="address" />
+    </div>
+
+    <input type="submit" value="ثبت نام" (click)="submitRegisterForm()" />
+  </div>
+</form>
