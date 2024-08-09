@@ -1,108 +1,16 @@
 <app-header> </app-header>
+
+
+ <div class="content">
 @for (i of products; track i.id){
 <div>
-  <span>{{ i.productName }}</span>
-  <span>{{ i.productName }}</span>
+  <!-- <span>{{ i.productName }}</span> -->
+
+  <app-product [products] ="i"></app-product>
+
 </div>
+
+
 
 }
 
-<div class="course-container">
-  <div class="course-card">
-    <div class="course-header js">
-      <h2>JavaScript</h2>
-      <p>دوره متخصص</p>
-    </div>
-    <div class="course-body">
-      <p>دوره جامع و پیشرفته جاوااسکریپت</p>
-      <p>تکمیل ضبط</p>
-      <p>ساعت: 240:00:00</p>
-      <a href="#">مشاهده اطلاعات دوره</a>
-      <div class="course-footer">
-        <span class="price original">1,849,000 تومان</span>
-        <span class="price discount">1,097,000 تومان</span>
-        <button>ثبت نام دوره</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="course-card">
-    <div class="course-header programming">
-      <h2>Programming</h2>
-      <p>دوره شروع و کسب درآمد از برنامه نویسی</p>
-    </div>
-    <div class="course-body">
-      <p>دوره شروع و کسب درآمد از برنامه نویسی</p>
-      <p>تکمیل ضبط</p>
-      <p>ساعت: 140:00:00</p>
-      <a href="#">مشاهده اطلاعات دوره</a>
-      <div class="course-footer">
-        <span class="price discount">رایگان</span>
-        <button>ثبت نام دوره</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="course-card">
-    <div class="course-header ts">
-      <h2>TypeScript</h2>
-      <p>دوره پیشرفته و پروژه محور تایپ اسکریپت</p>
-    </div>
-    <div class="course-body">
-      <p>دوره پیشرفته و پروژه محور تایپ اسکریپت</p>
-      <p>در حال برگزاری</p>
-      <p>ساعت: 80:00:00</p>
-      <a href="#">مشاهده اطلاعات دوره</a>
-      <div class="course-footer">
-        <span class="price original">1,349,000 تومان</span>
-        <span class="price discount">879,000 تومان</span>
-        <button>ثبت نام دوره</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="course-card">
-    <div class="course-header github">
-      <h2>GitHub</h2>
-      <p>دوره جامع</p>
-    </div>
-    <div class="course-body">
-      <p>دوره جامع GitHub</p>
-      <p>در حال برگزاری</p>
-      <a href="#">مشاهده اطلاعات دوره</a>
-      <div class="course-footer">
-        <button>ثبت نام دوره</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="course-card">
-    <div class="course-header flex">
-      <h2>Flex</h2>
-      <p>دوره پروژه محور</p>
-    </div>
-    <div class="course-body">
-      <p>دوره پروژه محور Flex</p>
-      <p>در حال برگزاری</p>
-      <a href="#">مشاهده اطلاعات دوره</a>
-      <div class="course-footer">
-        <button>ثبت نام دوره</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="course-card">
-    <div class="course-header devops">
-      <h2>DevOps</h2>
-      <p>دوره در مسیر فریلنسری</p>
-    </div>
-    <div class="course-body">
-      <p>دوره در مسیر فریلنسری</p>
-      <p>در حال برگزاری</p>
-      <a href="#">مشاهده اطلاعات دوره</a>
-      <div class="course-footer">
-        <button>ثبت نام دوره</button>
-      </div>
-    </div>
-  </div>
-</div>

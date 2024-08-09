@@ -38,4 +38,37 @@ $Angular-theme: mat.define-light-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*{
+  box-sizing: border-box;
+  font-family: IRANSans;
+}
+
+body{
+  margin: 0;
+}
+
+@font-face {
+  font-family: IRANYEKAN;
+  src: url(assets/Fonts/IRANYEKANEXTRABLACKFANUM.TTF) format(TTF);
+}
+
+@font-face {
+  font-family: IRANSans;
+  src: url(assets/Fonts/IRANSans.ttf) format(ttf);
+}
+
+@font-face {
+  font-family: IRANSans;
+  src: url(assets/Fonts/IRANSansXV.woff2) format(woff2);
+}
+
+@font-face {
+  font-family: IRANSans;
+  src: url(assets/Fonts/IRANSansXV.woff2) format(woff2);
+}
+
+@font-face {
+  font-family: IRANSans;
+  src: url(assets/Fonts/IRANSansX-Black.otf) format(otf);
+}
+

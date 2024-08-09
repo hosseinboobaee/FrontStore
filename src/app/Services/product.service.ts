@@ -12,4 +12,7 @@ export class ProductService {
   GetAllProduct(): Observable<any>{
     return this.http.get('/Product/GetAllProduct').pipe(take(1))
   }
+  GetProductById(id:number){
+    return this.http.get(`/Product/GetPtoductById/${id}`)
+  }
 }
