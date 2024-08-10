@@ -1,5 +1,8 @@
+import { VideoModel } from "./VideoModel";
+
 export class ProductModel {
+  public id: number;
   public productName: string;
   public price: number;
-  id: number;
+  public videos : VideoModel[];
 }

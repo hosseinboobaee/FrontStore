@@ -5,6 +5,7 @@ import { ProductModel } from '../Model/ProductModel';
 import { NgFor } from '@angular/common';
 import { ProductComponent } from "./product/product.component";
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { log } from 'console';
 
 @Component({
   selector: 'app-panel',
