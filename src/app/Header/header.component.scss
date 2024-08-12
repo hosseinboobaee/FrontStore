@@ -1,0 +1,26 @@
+li {
+  list-style-type: none;
+}
+header {
+  position: relative;
+  .logo-content {
+    position: absolute;
+    .logo {
+      width: 14rem;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  margin: 0;
+  height: 8vh;
+  align-items: center;
+  padding-right: 12rem;
+  .edjucate{
+    color: #4a6dff;
+    font-weight: bolder;
+  }
+}

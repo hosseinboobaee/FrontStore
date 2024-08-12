@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CurrentUserModel } from '../Model/CurrentUserModel';
 import { AuthService } from '../Services/auth.service';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

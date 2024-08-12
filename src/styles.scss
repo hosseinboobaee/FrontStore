@@ -2,6 +2,8 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
+@use "assets/scss/icons";
+@use "assets/scss/fonts";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -35,40 +37,23 @@ $Angular-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($Angular-theme);
 
+
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 *{
   box-sizing: border-box;
-  font-family: IRANSans;
+  direction: rtl;
 }
 
 body{
   margin: 0;
+  background: #f4f5f7;
+  font-family: IRANSansX, "Helvetica Neue", sans-serif !important;
+  -moz-font-feature-settings: "ss01";
+  -webkit-font-feature-settings: "ss01";
+  font-feature-settings: "ss01";
 }
 
-@font-face {
-  font-family: IRANYEKAN;
-  src: url(assets/Fonts/IRANYEKANEXTRABLACKFANUM.TTF) format(TTF);
-}
-
-@font-face {
-  font-family: IRANSans;
-  src: url(assets/Fonts/IRANSans.ttf) format(ttf);
-}
-
-@font-face {
-  font-family: IRANSans;
-  src: url(assets/Fonts/IRANSansXV.woff2) format(woff2);
-}
-
-@font-face {
-  font-family: IRANSans;
-  src: url(assets/Fonts/IRANSansXV.woff2) format(woff2);
-}
-
-@font-face {
-  font-family: IRANSans;
-  src: url(assets/Fonts/IRANSansX-Black.otf) format(otf);
-}
 

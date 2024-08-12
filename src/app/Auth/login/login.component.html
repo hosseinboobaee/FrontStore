@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm" class="login-form">
+<!-- <form [formGroup]="loginForm" class="login-form">
   <div>
     <div>
       <label for="email">ایمیل</label>
@@ -13,4 +13,52 @@
     <input type="submit" value="ورود" (click)="submitLoginForm()" />
     <a (click)="register()">ثبت نام</a>
   </div>
-</form>
+</form> -->
+
+<div class="page">
+  <div class="right">
+    <form class="box"  [formGroup]="loginForm">
+      <div class="up-box">
+        <h2>کد نویس</h2>
+        <p>ورود | ثبت نام</p>
+      </div>
+      <div class="main-box">
+        <p>سلام !</p>
+        <div>
+          <label for="text"> لطفا ایمیل یا شماره موبایل خود را وارد کنید </label>
+        <input type="text" name="email" formControlName="email" />
+        </div>
+        <div>
+          <label for="password">پسورد</label>
+          <input type="password" name="password" formControlName="password" />
+        </div>
+      </div>
+      <div class="down-box">
+        <button class="login-btn" (click)="submitLoginForm()"><a> ورود </a></button>
+        <div (click)="register()"><a> ثبت نام</a></div>
+      </div>
+    </form>
+  </div>
+  <div class="every-para">
+    <div class="para">
+      <div class="none">
+        <div class="photo">
+          <img src="assets/Image/cash.webp" alt="cash" />
+        </div>
+        <div class="matn">
+          <h2>یادگیری مهارت برنامه نویسی</h2>
+          <p>
+            برنامه نویسی مهارتیه که نیاز همیشگی جامعه است و هیچ ریسکی نداره. شما
+            روی خودتان سرمایه گذاری می کنید تا رشد کنید و آینده بهترهی را رقم
+            بزنید.
+          </p>
+        </div>
+        <div class="link">
+          <button>
+            <a class="road-map"><i class="fa-regular fa-file-lines"></i> نقشه راه یادگیری برنامه نویسی </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

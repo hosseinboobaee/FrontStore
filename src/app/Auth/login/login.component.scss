@@ -1,87 +1,138 @@
-// variables
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
-$font-family: "Arial", sans-serif;
-$input-border-radius: 5px;
-$transition-time: 0.3s;
+a {
+  text-decoration: none;
+}
+.page {
+  height: 100vh;
+  display: flex;
 
-// mixins
-@mixin transition($property) {
-  transition: $property $transition-time ease-in-out;
+  /* برای والد باکس و بعدی برای خود باکس */
+  .right {
+    width: 20%;
+    position: relative;
+    .box {
+      border: 2px solid #eee;
+      width: 23rem;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      position: absolute;
+      padding-bottom: 1rem;
+      padding-bottom: 1rem;
+      right: 50%;
+      top: 25%;
+    }
+  }
 }
 
-// styles
-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-family: $font-family;
+.up-box h2 {
+  text-align: center;
+  font-weight: 900;
+}
+.up-box p {
+  padding-right: 1.5rem;
+  font-weight: 800;
+  padding-bottom: 1rem;
+}
+.main-box {
+  padding-right: 1.5rem;
+  line-height: 1rem;
+}
+.main-box p {
+  opacity: 0.7;
+}
+.main-box label {
+  opacity: 0.7;
+}
+.main-box input {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 19rem;
+  height: 3rem;
+  border-radius: 11px;
+  background-color: #eee;
+  border: 0;
+  outline: none;
+  padding-left: 1rem;
+}
+.down-box button {
+  margin-right: 1.5rem;
+  width: 19rem;
+  height: 3rem;
+  margin-top: 1rem;
+  border-radius: 11px;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  background-color: rgb(74, 109, 255);
+}
+.down-box a {
+  color: white;
+}
+/* برای قسمت سمت چپ باکس همان توضیحات  */
+.every-para {
+  width: 80%;
+  background: linear-gradient(138deg, #4a6dff 0%, #1f4aff 100%);
+  border-bottom-right-radius: 35px;
+  border-top-right-radius: 35px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.para {
+  width: 27rem;
+  text-align: center;
+}
+/* برای مراحل با اعداد بیشتر از 992 پیکسل */
 
-  label {
+.photo {
+  padding-top: 1rem;
+}
+.matn {
+  color: white;
+}
+.link button {
+  width: 14rem;
+  height: 3rem;
+  border-radius: 28px;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.2) -6.84%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border: 2px solid white;
+  color: #fff;
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  .page {
+    height: 100vh;
     display: block;
-    margin-bottom: 8px;
-    color: #333;
+    background-color: #ccc;
   }
-
-  input[type="text"],
-  input[type="password"] {
+  .nums {
+    text-align: -webkit-center;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .nums p {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    color: white;
+  }
+  .right {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: $input-border-radius;
-    @include transition(all);
-
-    &:focus {
-      border-color: $primary-color;
-      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
   }
-
-  input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background: $primary-color;
-    border: none;
-    border-radius: $input-border-radius;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    @include transition(background);
-
-    &:hover {
-      background: $secondary-color;
-    }
+  .box {
+    position: unset;
   }
-}
-
-// animations
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-// applying animations
-form {
-  animation: fadeIn 1s ease-in-out;
-
-  div {
-    animation: slideUp 0.5s ease-in-out;
+  .every-para {
+    display: none;
   }
 }
