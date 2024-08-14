@@ -6,11 +6,12 @@ import { NgFor } from '@angular/common';
 import { ProductComponent } from "./product/product.component";
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { log } from 'console';
+import { SliderComponent } from './slider/slider.component';
 
 @Component({
   selector: 'app-panel',
   standalone: true,
-  imports: [HeaderComponent, NgFor, ProductComponent],
+  imports: [HeaderComponent, NgFor, ProductComponent, SliderComponent],
   templateUrl: './panel.component.html',
   styleUrl: './panel.component.scss',
 })

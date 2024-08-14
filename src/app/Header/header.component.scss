@@ -5,22 +5,40 @@ header {
   position: relative;
   .logo-content {
     position: absolute;
+    right: 11%;
     .logo {
       width: 14rem;
     }
   }
 }
 
-.menu {
+
+.menu-box{
   display: flex;
-  gap: 10px;
-  justify-content: flex-start;
-  margin: 0;
-  height: 8vh;
+  justify-content: space-around;
   align-items: center;
-  padding-right: 12rem;
-  .edjucate{
-    color: #4a6dff;
-    font-weight: bolder;
+  .menu {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    margin: 0;
+    height: 8vh;
+    align-items: center;
+    padding-right: 12rem;
+    .edjucate{
+      display: flex;
+      color: #4a6dff;
+      font-weight: bolder;
+    }
+  }
+  .login-btn{
+    background: #4a6dff;
+    color: #fff;
+    width: 5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 15%;
   }
 }
+

@@ -6,12 +6,20 @@
     <img class="logo" src="assets/logo/logo.png" alt="کدنویس">
   </div>
   <div>
-    <ul class="menu">
-      <li class="edjucate">
-        <mat-icon><i class="icon-archive-book"></i></mat-icon>
-        دوره های آموزشی
-      </li>
-      <li>ارتباط با ما</li>
-    </ul>
+    <div class="menu-box">
+      <ul class="menu">
+        <li class="edjucate">
+          <mat-icon><i class="icon-archive-book"></i></mat-icon>
+          دوره های آموزشی
+        </li>
+        <li>ارتباط با ما</li>
+      </ul>
+
+      <div>
+        <button class="login-btn" [routerLink] = "['/login']">
+          ورود
+        </button>
+      </div>
+    </div>
   </div>
 </header>

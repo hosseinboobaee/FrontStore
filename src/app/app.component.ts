@@ -7,6 +7,7 @@ import { HeaderComponent } from "./Header/header.component";
 import { AuthService } from './Services/auth.service';
 import { ICheckUser } from './Model/ICheckUser';
 import { CurrentUserModel } from './Model/CurrentUserModel';
+import { SliderComponent } from './panel/slider/slider.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { CurrentUserModel } from './Model/CurrentUserModel';
   imports: [RouterOutlet,
     RegisterComponent,
     LoginComponent,
-     HeaderComponent],
+     HeaderComponent,
+     SliderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
