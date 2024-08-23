@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { RegisterComponent } from './Auth/register/register.component';
 import Swal from 'sweetalert2';
@@ -8,6 +8,7 @@ import { AuthService } from './Services/auth.service';
 import { ICheckUser } from './Model/ICheckUser';
 import { CurrentUserModel } from './Model/CurrentUserModel';
 import { SliderComponent } from './panel/slider/slider.component';
+import { PresenceService } from './Services/presence.service';
 
 @Component({
   selector: 'app-root',
@@ -20,12 +21,27 @@ import { SliderComponent } from './panel/slider/slider.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
 
-  constructor(private auth:AuthService){
+  constructor(private auth:AuthService, private signalRService: PresenceService){
 
   }
+  ngOnDestroy(): void {
+   this.signalRService.hubConnection.off("askServerResponse");
+  }
   ngOnInit(){
+    this.signalRService.StartConnection();
+
+    
+    setTimeout(() => {
+      this.signalRService.AskServer();
+      this.signalRService.AskServerListener();
+    }, 1000);
+
+
+
+
+
     this.auth.checkUserAuth().subscribe((x:ICheckUser) => {
    if(x.status == "Success"){
     const user = new CurrentUserModel(
