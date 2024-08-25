@@ -18,7 +18,7 @@ StartConnection(){
    this.hubConnection.start()
    .then(
     () => {
-      console.log('Hub Connection Start');
+      console.log('Hub Connection Start');  
       
     })
     .catch(
