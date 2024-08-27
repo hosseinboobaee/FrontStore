@@ -9,6 +9,7 @@ import { ICheckUser } from './Model/ICheckUser';
 import { CurrentUserModel } from './Model/CurrentUserModel';
 import { SliderComponent } from './panel/slider/slider.component';
 import { PresenceService } from './Services/presence.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,9 @@ import { PresenceService } from './Services/presence.service';
     RegisterComponent,
     LoginComponent,
      HeaderComponent,
-     SliderComponent],
+     SliderComponent,
+     BrowserAnimationsModule
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -31,15 +34,6 @@ export class AppComponent implements OnDestroy {
   }
   ngOnInit(){
     this.signalRService.StartConnection();
-
-    
-    setTimeout(() => {
-      this.signalRService.AskServer();
-      this.signalRService.AskServerListener();
-    }, 1000);
-
-
-
 
 
     this.auth.checkUserAuth().subscribe((x:ICheckUser) => {

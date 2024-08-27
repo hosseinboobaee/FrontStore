@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HubUrl } from '../Utility/PathTools';
 import { HttpTransportType, HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
+import { log } from 'console';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,8 @@ StartConnection(){
    .then(
     () => {
       console.log('Hub Connection Start');  
+      this.AskServerListener();
+      this.AskServer();
       
     })
     .catch(
@@ -26,12 +29,20 @@ StartConnection(){
   }
 
 AskServer(){
+  console.log("askServerStart");
+  
   this.hubConnection.invoke("askServer", "hey")
+  .then(()=>{
+    console.log("askServer.then");
+  })
   .catch(err => console.log(err));
+  console.log("This is the final Prompt");
   
 }
 
   AskServerListener(){
+    console.log("askServerListenerStart");
+    
     this.hubConnection.on("askServerResponse", (someText)=>{
       console.log(someText);
 
