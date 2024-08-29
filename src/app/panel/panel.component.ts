@@ -5,13 +5,15 @@ import { ProductModel } from '../Model/ProductModel';
 import { NgFor } from '@angular/common';
 import { ProductComponent } from "./product/product.component";
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { log } from 'console';
 import { SliderComponent } from './slider/slider.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-panel',
   standalone: true,
-  imports: [HeaderComponent, NgFor, ProductComponent, SliderComponent],
+  imports: [HeaderComponent, NgFor, ProductComponent, SliderComponent,MatButtonModule, MatDividerModule, MatIconModule ],
   templateUrl: './panel.component.html',
   styleUrl: './panel.component.scss',
 })
