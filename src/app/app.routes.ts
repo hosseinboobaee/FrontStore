@@ -9,7 +9,7 @@ import { DetailComponent } from './panel/detail/detail.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'panel',
+    redirectTo: '/panel',
     pathMatch: 'full',
   },
   {
