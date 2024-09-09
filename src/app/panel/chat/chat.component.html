@@ -1,1 +1,17 @@
-<p>chat works!</p>
+<div>
+    <h2>Online Support Chat</h2>
+    <div>
+      <input [(ngModel)]="sender" type="text" placeholder="Your Name" />
+    </div>
+    <div>
+      <input [(ngModel)]="newMessage" placeholder="Enter your message" />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  
+    @for(msg of chatService.messages; track msg.content){
+        <div>
+          <p><strong>{{ msg.senderId }}:</strong> {{ msg.content }} <span>({{ msg.sentDate | date:'shortTime' }})</span></p>
+        </div>
+    }
+  </div>
+  

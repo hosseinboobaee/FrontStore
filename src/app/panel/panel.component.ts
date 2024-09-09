@@ -6,11 +6,12 @@ import { ProductComponent } from './product/product.component';
 import { ActivatedRoute } from '@angular/router';
 import { SliderComponent } from './slider/slider.component';
 import { NgFor } from '@angular/common';
+import { ChatComponent } from './chat/chat.component';
 
 @Component({
   selector: 'app-panel',
   standalone: true,
-  imports: [HeaderComponent, ProductComponent, SliderComponent, NgFor],
+  imports: [HeaderComponent, ProductComponent, SliderComponent, NgFor,ChatComponent],
   templateUrl: './panel.component.html',
   styleUrl: './panel.component.scss',
 })

@@ -9,6 +9,8 @@ import { ICheckUser } from './Model/ICheckUser';
 import { CurrentUserModel } from './Model/CurrentUserModel';
 import { SliderComponent } from './panel/slider/slider.component';
 import { PresenceService } from './Services/presence.service';
+import { ChatComponent } from './panel/chat/chat.component';
+import { ChatService } from './Services/chat.service';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +21,7 @@ import { PresenceService } from './Services/presence.service';
     LoginComponent,
     HeaderComponent,
     SliderComponent,
+    ChatComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -26,13 +29,13 @@ import { PresenceService } from './Services/presence.service';
 export class AppComponent implements OnDestroy {
   constructor(
     private auth: AuthService,
-    private signalRService: PresenceService
+    private signalRService: ChatService
   ) {}
   ngOnDestroy(): void {
-    this.signalRService.hubConnection.off('askServerResponse');
+   // this.signalRService.hubConnection.off('askServerResponse');
   }
   ngOnInit() {
-    this.signalRService.StartConnection();
+    //this.signalRService.StartConnection();
 
     this.auth.checkUserAuth().subscribe((x: ICheckUser) => {
       if (x.status == 'Success') {
